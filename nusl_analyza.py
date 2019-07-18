@@ -7,9 +7,9 @@ print("total no of records", len(df))
 #úkol_1_a_2
 df['no_of_records'] = 1
 
-df['year2'] = df['year'].str[:4]
-print(df['year2'].tail())
-task_1_df = df.groupby(['year2', 'no_of_projects']).count().astype('Int64')['no_of_records']
+df['year'] = df['year'].str[:4]
+print(df['year'].tail())
+task_1_df = df.groupby(['year', 'no_of_projects']).count().astype('Int64')['no_of_records']
 task_1_df.to_csv('výstupy/NUSL_csv/projects_year_NUSL.csv', sep=';', header=True)
 
 #úkol_2
